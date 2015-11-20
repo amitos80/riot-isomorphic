@@ -10,9 +10,6 @@ componentFactory.createComponent('apple', `
          <div>{name}</div>
      </li>
  </ul>
- <div show='{ data.types.length > 0 }'>
-     <button onclick={try} type="button">Try one</button> 
- </div>
  <div show='{ tasteResult }'>
      <p> Tried a {tasteResult.type} and it was {tasteResult.result} </p>
  </div>
@@ -43,12 +40,6 @@ componentFactory.createComponent('apple', `
         this.tasteResult = null;
         this.update();
     });
-
-    this.try = () => {
-        let typeToTry = this.data.types[Math.floor((Math.random() * this.data.types.length))]; 
-        console.log("Trying ", typeToTry);
-        this.dispatcher.trigger("taste_fruit", typeToTry);
-    }
 
     this.dispatcher.on('taste_result', (data) => {
       console.log("Taste result!", data);  

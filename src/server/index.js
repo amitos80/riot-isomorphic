@@ -69,18 +69,12 @@ app.configure(
     saveUninitialized: true
 }))
 .use('/fruit', services.fruit)
-.use('/taste', services.taste)
-.use('/users', services.users);
+.use('/taste', services.taste);
 
 // Client routes
 routes.runRoutingTable(app);
 
-// Authentication setup
-let userService = app.service('users');
 
-services.users.insertHooks(userService);
-services.users.createTestUser(userService);
-services.users.setupPassport(userService, app);
 
 app.use(function (req, res, next) {
 
