@@ -119,7 +119,7 @@ gulp.task('serve', ['html', 'public', 'env'] , function(cb) {
 
 gulp.task('reload-server', ['public'], function() {
     console.log("Reloading server!")
-    server.notify(watchEvent) ;
+    server.notify(watchEvent);
 });
 
 // Delete build Directory
