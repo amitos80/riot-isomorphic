@@ -100,7 +100,7 @@ app.use(function (req, res, next) {
             });
         });
     }
-    renderTest(); 
+    renderTest();
 });
 
 console.log("Starting server");

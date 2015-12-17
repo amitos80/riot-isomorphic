@@ -12,8 +12,11 @@ componentFactory.createComponent('mall', `
  <banana if={stores.fruit.currentFruit=='banana'}></banana>
  <style>
      mall {
-        a {
-            display: flex;
+        apple {
+            display: block
+        }
+        banana {
+            display: block
         }
      }
  </style>

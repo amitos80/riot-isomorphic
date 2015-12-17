@@ -14,6 +14,7 @@ var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
 var file = require('gulp-file');
 var less = require('gulp-less');
+//var babelPollyfill = require('babel/polyfill');
 
 
 var server;
@@ -74,6 +75,7 @@ gulp.task('browserify', ['js-client', 'js-server', 'js-app'], function() {
         transform: [babelify.configure({optional: ['runtime', 'es7.asyncFunctions']})],
         fullPaths: true
     });
+
     return b.bundle()
         .pipe(source('bundle.js'))
         .pipe(buffer())

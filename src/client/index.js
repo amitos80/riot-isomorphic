@@ -10,7 +10,6 @@ import routes from '../app/routes';
 
 import _ from 'underscore'
 
-
 window.page = page;
 
 let loadContext = {};
