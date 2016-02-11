@@ -40,3 +40,6 @@ jspm_packages
 *.swo
 
 .ieda
+.ieda/*
+.ieda/**
+.idea/workspace.xml
